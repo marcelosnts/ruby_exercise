@@ -5,9 +5,11 @@ one:
   email: MyString
   avatar_image: MyString
   role: MyString
+  password_digest: <%= BCrypt::Password.create('secret') %>
 
 two:
   full_name: MyString
   email: MyString
   avatar_image: MyString
   role: MyString
+  password_digest: <%= BCrypt::Password.create('secret') %>
