@@ -1,44 +1,50 @@
 <%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+  <div class="field">
+    <div class="input-group">
+      <%= form_group_for form, :full_name, label: true do %>
+        <%= form.text_field :full_name, class: "form-control" %>
       <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :full_name %>
-    <%= form.text_field :full_name %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <div class="input-group">
+      <%= form_group_for form, :email, label: true do %>
+        <%= form.text_field :email, class: "form-control" %>
+      <% end %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :avatar_image %>
-    <%= form.text_field :avatar_image %>
+    <div class="input-group">
+      <%= form_group_for form, :avatar_image, label: true do %>
+        <%= form.text_field :avatar_image, class: "form-control" %>
+      <% end %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :role %>
-    <%= form.text_field :role %>
+    <div class="input-group">
+      <%= form_group_for form, :role, label: true do %>
+        <%= form.select :role, ["Admin", "No-admin"], {}, class: "form-control"%>
+      <% end %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+    <div class="input-group">
+      <%= form_group_for form, :password, label: true do %>
+        <%= form.password_field :password, class: "form-control" %>
+      <% end %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
+    <div class="input-group">
+      <%= form_group_for form, :password_confirmation, label: true do %>
+        <%= form.password_field :password_confirmation, class: "form-control" %>
+      <% end %>
+    </div>
   </div>
 
   <div class="actions">

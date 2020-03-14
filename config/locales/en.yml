@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  errors:
+    messages:
+      blank: "Hey! Don't forget this."
+      user_exist: "Hey!! You're already on my DB!? It can't be right!"

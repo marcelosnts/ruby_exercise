@@ -31,6 +31,8 @@ gem 'bootstrap', '~> 4.4.1'
 # Bootstrap 4 rubygem for Rails / Sprockets / Hanami / etc
 gem 'bcrypt', '~> 3.1.7'
 # Use ActiveModel has_secure_password
+gem 'pry', '~> 0.12.2'
+# A runtime developer console and IRB alternative with powerful introspection capabilities
 
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
