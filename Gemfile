@@ -34,6 +34,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'pry', '~> 0.12.2'
 # A runtime developer console and IRB alternative with powerful introspection capabilities
 
+group :development, :test do
+  gem 'rspec-rails', ">= 3.9.0"
+end
+#RSpec for Rails-3+
+
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -62,7 +67,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'chromedriver-helper', '1.2.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
