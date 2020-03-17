@@ -1,3 +1,65 @@
-header > .container{ 
-    background-color: #A9A9A9;
+body {
+    background-color: rgb(102, 109, 201);
+}
+
+.login-workspace {
+    background-color: white;
+    width: 600px;
+    height: auto;
+	display: block;
+	margin: 15% auto;
+	text-align: center;
+	border: solid 1px;
+	border-radius: 20px;
+}
+.login-text-field {
+	margin-left: 20px;
+}
+
+.dashboard-workspace {
+	background-color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+.info {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.info-block {
+	width: 200px;
+	height: 200px;
+	border: solid 1px;
+	background-color: #667bf3;
+	padding: 20px;
+	margin: 20px;
+}
+
+.info-text {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.icon {
+	width: 80px;
+	height: 80px;
+}
+
+.users-workspace {
+	background-color: white;
+	padding: 100px;
+}
+
+.user-image {
+	float: right;
+	margin-top: -170px;
+	margin-right: -70px;
+	width: 200px;
+	height: 200px;
+}
+
+.user-form-workspace {
+	background-color: white;
+	padding: 20px;
 }

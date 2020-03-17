@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
             @current_user = nil
         end
     end
+
+    def authorize
+        if current_user.nil?
+            redirect_to root_url
+        end
+    end
 end

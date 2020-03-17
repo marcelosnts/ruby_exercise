@@ -29,6 +29,8 @@ gem 'jquery-rails'
 # A gem to automate using jQuery with Rails 
 gem 'bootstrap', '~> 4.4.1'
 # Bootstrap 4 rubygem for Rails / Sprockets / Hanami / etc
+gem 'open-iconic-rails'
+# Iconic icons lib
 gem 'bcrypt', '~> 3.1.7'
 # Use ActiveModel has_secure_password
 gem 'pry', '~> 0.12.2'

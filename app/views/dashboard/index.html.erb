@@ -1,0 +1,36 @@
+<div class="dashboard-workspace">
+    <h1>Dashboard!</h1>
+    <span class="info">Basic overview for admins.</span>
+
+    <div class="row offset-md-1">
+        <div class="info-block col-md-3">
+            <svg class="icon" viewBox="0 0 8 8">
+                <use class="person" xlink:href="/assets/open-iconic.min.svg#person"></use>
+            </svg>
+            <div class="info-text">
+                <%= User.all.count %><br>
+            </div>
+            <span class="info">Users total</span>
+        </div>
+        <div class="info-block col-md-3">
+            <svg class="icon" viewBox="0 0 8 8">
+                <use class="star" xlink:href="/assets/open-iconic.min.svg#star">
+                </use>
+            </svg>
+            <div class="info-text">
+                <%= User.where(:role => "admin").count %><br>
+            </div>
+            <span class="info">Admins</span>
+        </div>
+        <div class="info-block col-md-3">
+            <svg class="icon" viewBox="0 0 8 8">
+                <use class="plus" xlink:href="/assets/open-iconic.min.svg#plus">
+                </use>
+            </svg>
+            <div class="info-text">
+                <%= User.where(:role => "no-admin").count %><br>
+            </div>
+            <span class="info">No-admins</span>
+        </div>
+    </div>
+</div>

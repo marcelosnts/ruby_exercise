@@ -1,53 +1,51 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <div class="field">
-    <div class="input-group">
-      <%= form_group_for form, :full_name, label: true do %>
-        <%= form.text_field :full_name, class: "form-control" %>
-      <% end %>
-    </div>
-  </div>
+<div class="user-form-workspace">
+    <div class="col-md-10">
+        <%= form_with(model: user, local: true) do |form| %>
 
-  <div class="field">
-    <div class="input-group">
-      <%= form_group_for form, :email, label: true do %>
-        <%= form.text_field :email, class: "form-control" %>
-      <% end %>
-    </div>
-  </div>
+        <div class="form-group offset-md-2">
+            <label>Full name</label>
+            <%= form.text_field :full_name, class: "form-control" %>
+        </div>
 
-  <div class="field">
-    <div class="input-group">
-      <%= form_group_for form, :avatar_image, label: true do %>
-        <%= form.text_field :avatar_image, class: "form-control" %>
-      <% end %>
-    </div>
-  </div>
+        <div class="form-group offset-md-2">
+            <label>E-mail</label>
+            <%= form.text_field :email, class: "form-control" %>
+        </div>
 
-  <div class="field">
-    <div class="input-group">
-      <%= form_group_for form, :role, label: true do %>
-        <%= form.select :role, ["Admin", "No-admin"], {}, class: "form-control"%>
-      <% end %>
-    </div>
-  </div>
+        <div class="form-group offset-md-2">
+            <label>Avatar image</label>
+            <%= form.text_field :avatar_image, class: "form-control" %>
+        </div>
 
-  <div class="field">
-    <div class="input-group">
-      <%= form_group_for form, :password, label: true do %>
-        <%= form.password_field :password, class: "form-control" %>
-      <% end %>
-    </div>
-  </div>
+        <% if current_user %>
+        <% if current_user.role.eql? "Admin" %>
 
-  <div class="field">
-    <div class="input-group">
-      <%= form_group_for form, :password_confirmation, label: true do %>
-        <%= form.password_field :password_confirmation, class: "form-control" %>
-      <% end %>
-    </div>
-  </div>
+        <div class="form-group offset-md-2">
+            <label>Role</label>
+            <%= form.select :role, ["Admin", "No-admin"], {}, class: "form-control"%>
+        </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+        <% end %>
+        <% else %>
+
+        <input type="hidden" name="user[role]" value="No-admin" />
+
+        <% end %>
+
+        <div class="form-group offset-md-2">
+            <label>Password</label>
+            <%= form.password_field :password, class: "form-control" %>
+        </div>
+
+        <div class="form-group offset-md-2">
+            <label>Password confirmation</label>
+            <%= form.password_field :password_confirmation, class: "form-control" %>
+        </div>
+
+        <div class="actions offset-md-2">
+            <%= form.submit 'Submit', class: "btn btn-primary col-md-2" %>
+            <a href=<%= users_path %> class="btn btn-success col-md-2">Back</a>
+        </div>
+    </div>
+</div>
 <% end %>

@@ -1,24 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="users-workspace">
+    <div class="h2">
+        <%= @user.full_name %>
+    </div>
+    <br>
+    <div class="h5">
+        Email:
+        <div class="text-muted">
+            <%= @user.email %>
+        </div>
+    </div>
+    <br>
+    <div class="h5">
+        <img src=<%= @user.avatar_image %> alt="User image" class="img-thumbnail user-image">
+    </div>
 
-<p>
-  <strong>Full name:</strong>
-  <%= @user.full_name %>
-</p>
+    <div class="h5">
+        Role:
+        <div class="text-muted">
+            <%= @user.role %>
+        </div>
+    </div>
+    <br><br>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+    <a href=<%= edit_user_path(@user) %> class="btn btn-primary col-md-1">Edit</a>&nbsp
+    <a href=<%= users_path %> class="btn btn-success col-md-1">Back</a>
+    <a href=<%= self_destroy_path(:id => current_user.id) %> class="btn btn-danger col-md-1">Delete</a>
 
-<p>
-  <strong>Avatar image:</strong>
-  <%= @user.avatar_image %>
-</p>
-
-<p>
-  <strong>Role:</strong>
-  <%= @user.role %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+</div>
