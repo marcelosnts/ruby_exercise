@@ -1,11 +1,11 @@
-Ruby_exercise
+Ruby_exercise <br><br>
 
 
-Ruby version: 2.6.0  
+Ruby version: 2.6.0<br><br>
 
-Rails: 5.2.2  
+Rails: 5.2.2<br><br>
 
-DB: Mysql  
+DB: Mysql<br><br> 
 
 
 This is a ruby simple CRUD exercise with proper form validations and rspec tests. 
