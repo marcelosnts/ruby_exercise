@@ -5,7 +5,7 @@ Ruby version: 2.6.0<br>
 
 Rails: 5.2.2<br>
 
-DB: Mysql<br>
+DB: Mysql<br><br>
 
 
 This is a ruby simple CRUD exercise with proper form validations and rspec tests. 
